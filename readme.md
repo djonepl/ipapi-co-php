@@ -19,7 +19,7 @@ Just import, instantiate and call:
 
 use IpApi\IpApi;
 
-$api = new IpApi();
+$api = new IpApi('APIKEY');
 $location = $api->lookup('ip');
 ```
 
