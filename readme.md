@@ -20,34 +20,51 @@ Just import, instantiate and call:
 use IpApi\IpApi;
 
 $api = new IpApi();
-$location = $api->locate('ip or address');
+$location = $api->lookup('ip');
 ```
 
 ### The \IpApi\Location object
 
 The location object has an schema returned composed by the following fields by default:
 
-- status: Status of operation;
-- country: Country of address;
-- countryCode: Country code of address;
-- region: Region abbr (state) of address;
-- regionName": Region name (state) of address;
-- city: City of address;
-- zip: Zipcode of address;
-- lat: Latitude of address;
-- lon: Longitude of address;
-- timezone: Timezone related to address;
-- isp: The ISP organization;
-- org: The organization name related to address;
-- as: The AS number and name;
-- query: The address or IP used on query.
+ip
+network
+version
+city
+region
+region_code
+country
+country_name
+country_code
+country_code_iso3
+country_capital
+country_tld
+continent_code
+in_eu
+postal
+latitude
+longitude
+timezone
+utc_offset
+country_calling_code
+currency
+currency_name
+languages
+country_area
+country_population
+asn
+org
 
 The location object has some others methods and features:
 
 ```php
+$location = $api->lookup('8.8.8.8');
+
 // Convert the object to an array
 $data = $location->toArray();
 
-// JSON encode
-$json = json_encode($location);
+// Extract city and ASN 
+echo $location->city;
+echo $location->asn;
+
 ```
