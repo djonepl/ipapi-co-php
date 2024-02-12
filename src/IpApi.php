@@ -2,6 +2,8 @@
 
 namespace IpApi;
 
+use IpApi\Location;
+
 /**
  * Class IpApi.
  *
@@ -11,11 +13,10 @@ namespace IpApi;
  */
 class IpApi
 {
-
     /**
      * @var string
      */
-    protected $apiKey = '';
+    protected $apiKey;
 
     /**
      * API endpoint address.
@@ -23,6 +24,16 @@ class IpApi
      * @var string
      */
     protected $endpoint = 'https://ipapi.co/';
+    
+    /**
+     * Initializes a new instance with key.
+     *
+     * @param string $apiKey
+     */
+    public function __construct(string $apiKey)
+    {
+        $this->apiKey = $apiKey;
+    }
 
     /**
      * Builds a location object from received parsed data.
@@ -71,7 +82,7 @@ class IpApi
      * @param string $address
      * @return \IpApi\Location
      */
-    public function locate($address)
+    public function lookup($address)
     {
         $url = $this->buildUrl($address);
         $data = $this->fetch($url);
