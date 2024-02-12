@@ -1,5 +1,5 @@
 {
-    "name": "naylonkessler/ipapi-sdk-php",
+    "name": "djonepl/ipapi-co-php",
     "description": "A simple API for ip-api.com using PHP",
     "require": {
         "php": ">=5.4",
