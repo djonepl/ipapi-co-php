@@ -64,7 +64,7 @@ $location = $api->lookup('8.8.8.8');
 $data = $location->toArray();
 
 // Extract city and ASN 
-echo $location->city;
-echo $location->asn;
+echo $location->city; // Mountain View
+echo $location->asn; // AS15169
 
 ```
