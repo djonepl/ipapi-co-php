@@ -22,14 +22,7 @@ class IpApi
      *
      * @var string
      */
-    protected $endpoint = 'http://ip-api.com/json/';
-
-    /**
-     * API endpoint address.
-     *
-     * @var string
-     */
-    protected $endpointPro = 'http://pro.ip-api.com/json/';
+    protected $endpoint = 'https://ipapi.co/';
 
     /**
      * Builds a location object from received parsed data.
@@ -53,9 +46,9 @@ class IpApi
         $url = '';
 
         if (empty($this->apiKey)) {
-            $url = $this->endpoint . $address;
+            $url = $this->endpoint . $address . '/json/';
         } else {
-            $url = $this->endpointPro . $address . '?key=' . $this->apiKey;
+            $url = $this->endpoint . $address . '/json/?key=' . $this->apiKey;
         }
 
         return $url;
