@@ -1,13 +1,13 @@
-# ip-api.com PHP SDK
+# ipapi.co PHP
 
-A simple API for ip-api.com using PHP
+A simple API for ipapi.co using PHP
 
 ## Installation
 
 Just require the package using composer.
 
 ```sh
-composer require naylonkessler/ipapi-sdk-php
+composer require djonepl/ipapi-co-php
 ```
 
 ## Using the package
