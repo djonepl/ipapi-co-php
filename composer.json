@@ -1,6 +1,8 @@
 {
     "name": "djonepl/ipapi-co-php",
     "description": "A simple API for ip-api.com using PHP",
+    "license": "MIT",
+    "type": "library",
     "require": {
         "php": ">=5.4",
         "ext-json": "*"
@@ -8,7 +10,6 @@
     "require-dev": {
         "phpunit/phpunit": "5.7"
     },
-    "license": "MIT",
     "authors": [
         {
             "name": "Naylon Kessler de Aquino",
